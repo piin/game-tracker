@@ -1,0 +1,9 @@
+.superContainer{
+    position: absolute;
+    width: 100vw;
+    background: #888;
+    overflow: hidden;
+}
+.body{
+    overflow: hidden;
+}

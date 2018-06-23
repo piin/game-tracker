@@ -1,0 +1,10 @@
+gameItem{
+    margin: auto;
+    height: 100vh;
+    float: left;
+    transform: skew(-5deg);
+}
+*{
+    transition-timing-function: linear;
+    transition: 1s;
+}

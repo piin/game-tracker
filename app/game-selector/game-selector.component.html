@@ -1,0 +1,11 @@
+<div class="gameMenu" >
+  <gameItem
+    class="z-depth-2 hoverable"
+    *ngFor="let gameItem of gameItems;let i=index"
+    [style.background-image]="'url(' + gameItem.background + ')'"
+    (click)="toggleGameMenu(i)"
+    [ngStyle]="{
+      width:(gameItem.open)?'80%':menuSize
+    }"
+  ></gameItem>
+</div>
