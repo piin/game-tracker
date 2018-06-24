@@ -1,10 +1,30 @@
-gameItem{
+.gameItem{
     margin: auto;
     height: 100vh;
     float: left;
     transform: skew(-5deg);
+    background-position: fixed!important;
+    background-size:cover!important;
 }
 *{
     transition-timing-function: linear;
     transition: 1s;
+}
+.closeMenu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color:white;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    text-shadow: 3px 3px 3px #888;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.closeMenu:hover{
+    background: rgba(190,190,190,.8);
+    border-radius: 100%;
+    text-shadow: 2px 2px 6px #f00;
 }

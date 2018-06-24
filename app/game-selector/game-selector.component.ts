@@ -22,9 +22,10 @@ export class GameSelectorComponent implements OnInit {
     this.menuSize = (100 / this.gameItems.length) + '%';
   }
   reSize() {
-    this.menuSize = (20 / this.gameItems.length - 1) + '%';
+    this.menuSize = (20 / (this.gameItems.length - 1)) + '%';
   }
   toggleGameMenu(index) {
+    console.log(index);
     const open = this.gameItems[index].open !== true;
     this.resetOpenCloseStatus();
     this.gameItems[index].open = open;

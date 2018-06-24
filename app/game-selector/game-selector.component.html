@@ -1,11 +1,19 @@
 <div class="gameMenu" >
-  <gameItem
-    class="z-depth-2 hoverable"
+  <div 
+    class="gameItem z-depth-2 hoverable"
     *ngFor="let gameItem of gameItems;let i=index"
     [style.background-image]="'url(' + gameItem.background + ')'"
-    (click)="toggleGameMenu(i)"
+    (click)="(!gameItem.open)?toggleGameMenu(i):''"
     [ngStyle]="{
       width:(gameItem.open)?'80%':menuSize
     }"
-  ></gameItem>
+    >
+      <a 
+        *ngIf="gameItem.open"
+        (click)="toggleGameMenu(i) ;$event.stopPropagation();"
+        class="closeMenu">
+          <i class="material-icons">X</i>
+      </a>
+      <gameItem [gameData]="gameItem"></gameItem>
+  </div>
 </div>
