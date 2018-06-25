@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameTarget } from '../game-item/gameTarget';
-import { ForniteAPI } from '../../APIHandlers/forniteAPI';
+import { ForniteAPI } from '../core/apihandlers/forniteAPI';
 @Component({
   selector: 'gameSelector',
   templateUrl: './game-selector.component.html',
@@ -39,9 +39,8 @@ export class GameSelectorComponent implements OnInit {
   resetOpenCloseStatus() {
     for (const index in this.gameItems) {
       if (this.gameItems.hasOwnProperty(index)) {
-      this.gameItems[index].open = false;
+        this.gameItems[index].open = false;
+      }
     }
   }
-}
-
 }

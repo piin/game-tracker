@@ -1,5 +1,5 @@
 
-import { ApiInterface } from './../../APIHandlers/api-interface';
+import { ApiInterface } from '../core/apihandlers/api-interface';
 export class GameTarget {
     API: ApiInterface;
     background: string;

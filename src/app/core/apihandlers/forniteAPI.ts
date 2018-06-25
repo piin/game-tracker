@@ -1,4 +1,4 @@
-import { Ajax } from './../ToolsJS/Ajax';
+import { Ajax } from '../toolsjs/Ajax';
 import { ApiInterface } from './api-interface';
 
 export class ForniteAPI extends Ajax implements ApiInterface {
