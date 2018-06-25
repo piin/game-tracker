@@ -1,15 +1,18 @@
+
+import { ApiInterface } from './../../APIHandlers/api-interface';
+import { ForniteAPI } from '../../APIHandlers/forniteAPI';
 export class GameTarget {
-    apiPath: string;
+    API: ApiInterface;
     background: string;
     open: boolean;
 
     constructor(
         background: string,
-        apiPath: string,
+        API: ApiInterface,
         open: boolean = false,
     ) {
         this.background = background;
-        this.apiPath = apiPath;
+        this.API = API;
         this.open = open;
     }
 }

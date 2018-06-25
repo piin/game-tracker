@@ -9,10 +9,17 @@ import { GameTarget } from './gameTarget';
 export class GameItemComponent implements OnInit {
 
   @Input() gameData: GameTarget;
+  public userName: string;
+  public userData: any;
   constructor() { }
 
   ngOnInit() {
     console.log(this.gameData);
+  }
+  async printApiData() {
+    const API = this.gameData.API;
+    const apiData = await API.show(this.userName);
+    console.log(apiData);
   }
 
 }

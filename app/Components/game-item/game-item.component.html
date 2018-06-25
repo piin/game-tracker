@@ -1,0 +1,12 @@
+
+<div *ngIf="gameData.open" class="card-panel hoverable userForm transparency">
+  <div class="row">
+    <h3>
+      Ingrese su nombre de usuario.
+    </h3>
+      <div class="input-field col s8 offset-s2">
+        <input name="userName" id="userName" type="text" class="validate" [(ngModel)]="userName">
+          <label for="userName">Nombre de usuario</label>
+        <button class="btn-large right waves-effect waves-light pulse" (click)="printApiData()">Ingresar</button>
+    </div>
+</div>

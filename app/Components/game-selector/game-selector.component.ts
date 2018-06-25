@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameTarget } from '../game-item/gameTarget';
+import { ForniteAPI } from '../../APIHandlers/forniteAPI';
 @Component({
   selector: 'gameSelector',
   templateUrl: './game-selector.component.html',
@@ -13,8 +14,8 @@ export class GameSelectorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gameItems.push(new GameTarget('/assets/wallpapers/forniteWall.jpg', ''));
-    this.gameItems.push(new GameTarget('/assets/wallpapers/lolWall.jpg', ''));
+    this.gameItems.push(new GameTarget('/assets/wallpapers/forniteWall.jpg', new ForniteAPI()));
+    this.gameItems.push(new GameTarget('/assets/wallpapers/lolWall.jpg', new ForniteAPI()));
     this.setSize();
     console.log(this.gameItems);
   }
