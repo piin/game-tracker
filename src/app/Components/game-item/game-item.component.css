@@ -1,0 +1,35 @@
+.transparency{
+    background: rgba(50,50,50,0.9);
+}
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(190%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .userForm {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 250px;
+    width: 50%;
+
+  }
+  .userForm input{
+      color:white;
+  }
+  .userForm h3 {
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px; 
+  }
